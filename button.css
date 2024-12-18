@@ -1,0 +1,28 @@
+#controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+button {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #6de355;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #c23d3d;
+}
+
+button:active {
+  background-color: #3e8e41;
+}
