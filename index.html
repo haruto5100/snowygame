@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>雪よけゲーム</title>
+  <title>玉避けゲーム</title>
+  <!-- CSSファイルを外部ファイルとして参照 -->
+  <link rel="stylesheet" href="button.css">
   <style>
     body {
       margin: 0;
@@ -33,5 +35,10 @@
   <div id="score">スコア: 0</div>
   <canvas id="canvas"></canvas>
   <script src="snowy.js"></script>
+  <div id="controls">
+    <button id="leftBtn">←</button>
+    <button id="rightBtn">→</button>
+    <button id="restartBtn">リセット</button>
+</div>
 </body>
 </html>
