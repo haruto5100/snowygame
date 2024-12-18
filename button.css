@@ -1,28 +1,75 @@
-#controls {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: space-between;
-  width: 200px;
-}
-
-button {
-  font-size: 20px;
-  padding: 10px;
-  cursor: pointer;
-  background-color: #6de355;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #c23d3d;
-}
-
-button:active {
-  background-color: #3e8e41;
-}
+/* 全体のリセット */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+  
+  /* タイトルとスコア */
+  h1, p {
+    margin: 10px 0;
+  }
+  
+  /* ゲーム画面コンテナ */
+  #game-container {
+    margin: 0 auto;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* キャンバス */
+  #game-canvas {
+    display: block;
+    background-color: #e6f7ff; /* ゲーム背景色 */
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+  }
+  
+  /* 操作ボタンエリア */
+  #controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    background-color: #333;
+    padding: 10px 0;
+  }
+  
+  #controls button {
+    width: 80px;
+    height: 80px;
+    font-size: 24px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  #controls button:active {
+    background-color: #45a049;
+  }
+  
+  /* スマホ用レスポンシブデザイン */
+  @media screen and (max-width: 768px) {
+    #game-container, #game-canvas {
+      width: 90%; /* 横幅をデバイス幅の90%に */
+      height: auto;
+    }
+  
+    #controls {
+      width: 90%; /* 操作ボタンエリアも90%に */
+      margin: 0 auto;
+    }
+  
+    #controls button {
+      width: 60px;
+      height: 60px;
+      font-size: 18px;
+    }
+  }
