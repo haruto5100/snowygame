@@ -56,20 +56,20 @@ body {
   }
   
   /* スマホ用レスポンシブデザイン */
-  @media screen and (max-width: 768px) {
-    #game-container, #game-canvas {
-      width: 90%; /* 横幅をデバイス幅の90%に */
-      height: auto;
-    }
-  
-    #controls {
-      width: 90%; /* 操作ボタンエリアも90%に */
-      margin: 0 auto;
-    }
-  
-    #controls button {
-      width: 60px;
-      height: 60px;
-      font-size: 18px;
-    }
+@media screen and (max-width: 768px) {
+  #game-container, #game-canvas {
+    width: 90%; /* 横幅をデバイス幅の90%に */
+    height: auto;
+  }
+
+  #controls {
+    width: 90%; /* ゲーム画面と同じ横幅に合わせる */
+    padding: 10px 0;
+  }
+
+  #controls button {
+    height: 70px; /* ボタンの高さを大きく */
+    font-size: 20px; /* ボタン内の文字サイズ */
+    margin: 0 5px; /* ボタン間の余白 */
+  }
   }
