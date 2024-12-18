@@ -9,6 +9,7 @@ body {
   align-items: center;
   height: 100vh;
   flex-direction: column;
+  overflow: hidden; /* スクロールバーを非表示 */
 }
 
 /* ゲーム画面（キャンバス）のスタイル */
@@ -16,31 +17,36 @@ canvas {
   background-color: #fff;
   border: 1px solid #000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto; /* 高さを画面サイズに合わせる */
+  max-height: 80vh; /* 画面の高さに合わせて最大値を設定 */
 }
 
 /* ボタンのスタイル */
 #controls {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
+  padding: 0 10px;
 }
 
 /* ボタンを大きくして使いやすく */
 #controls button {
   font-size: 24px;  /* ボタン内の文字を大きく */
-  width: 80px;      /* 幅を広げる */
-  height: 80px;     /* 高さを広げる */
+  width: 60px;      /* 幅を広げる */
+  height: 60px;     /* 高さを広げる */
   margin: 10px;     /* ボタン間の余白 */
   background-color: #4CAF50;  /* ボタンの色 */
   color: white;     /* 文字色 */
   border: none;     /* 枠線をなくす */
   border-radius: 10px;  /* 角を丸く */
   cursor: pointer;  /* ポインタカーソル */
+  transition: background-color 0.3s; /* クリック時に背景色をスムーズに変更 */
 }
 
 /* ボタンが押されたとき */
@@ -52,23 +58,34 @@ canvas {
 @media screen and (max-width: 600px) {
   /* キャンバスサイズ調整（画面幅に合わせてキャンバスを縮小） */
   canvas {
-    width: 90%;         /* 画面幅の90%に設定 */
-    height: 300px;      /* 高さを固定 */
+    width: 100%;         /* 画面幅の100%に設定 */
+    height: auto;        /* 高さを自動調整 */
   }
 
   /* コントロールボタンの位置を調整 */
   #controls {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;         /* ボタンの幅を画面幅に合わせる */
+    width: 90%;         /* ボタンの幅を画面幅の90%に合わせる */
     justify-content: space-between; /* ボタン間のスペースを調整 */
+    padding: 0 5%;      /* ボタンの左右の余白を設定 */
   }
 
   #controls button {
-    font-size: 30px;   /* スマホでは少し小さく */
-    width: 120px;       /* 幅を少し小さく */
-    height: 120px;      /* 高さを少し小さく */
+    font-size: 20px;   /* スマホでは少し小さく */
+    width: 100px;       /* 幅を少し小さく */
+    height: 100px;      /* 高さを少し小さく */
+  }
+}
+
+/* PC用のデザイン調整 */
+@media screen and (min-width: 601px) {
+  /* キャンバスサイズ調整（画面の幅に合わせて調整） */
+  canvas {
+    max-height: 80vh; /* 画面の高さに合わせて最大値を設定 */
+  }
+
+  #controls button {
+    font-size: 24px;  /* PCでは通常のサイズ */
+    width: 80px;      /* 幅を広げる */
+    height: 80px;     /* 高さを広げる */
   }
 }
