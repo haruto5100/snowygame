@@ -67,7 +67,7 @@ canvas {
   }
 
   #controls button {
-    font-size: 22px;   /* スマホでは少し小さく */
+    font-size: 30px;   /* スマホでは少し小さく */
     width: 60px;       /* 幅を少し小さく */
     height: 60px;      /* 高さを少し小さく */
   }
