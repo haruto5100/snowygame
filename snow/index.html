@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>玉避けゲーム</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background-color: rgb(173, 198, 230);
+      border: 2px solid black;
+    }
+
+    
+  </style>
+</head>
+<body>
+    
+  <h1>雪よけゲーム</h1>
+  <p>← 左キー / → 右キーで操作、ESCキーでリロード</p>
+  <!-- スコアとタイマーは画面外に配置 -->
+  <div id="score">スコア: 0</div>
+  <canvas id="canvas"></canvas>
+  <script src="snowy.js"></script>
+</body>
+</html>
