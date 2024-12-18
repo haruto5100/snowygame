@@ -188,3 +188,17 @@ window.onload = function () {
   
   // setIntervalでゲームを開始
   var timer = setInterval(gameMainLoop, 50);
+
+// ボタン操作のイベントリスナー
+document.getElementById("leftBtn").addEventListener("click", function () {
+  if (plane.posX > 0) plane.posX -= 10; // 左に移動
+});
+
+document.getElementById("rightBtn").addEventListener("click", function () {
+  if (plane.posX < w - 40) plane.posX += 10; // 右に移動
+});
+
+document.getElementById("restartBtn").addEventListener("click", initializeGame);
+
+
+  
